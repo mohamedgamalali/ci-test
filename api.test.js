@@ -8,6 +8,7 @@ const app = middleware();
 
 describe('api tests', () => {
     it('get /',async () => {
+        
         const res = await supertest(app).get('/').expect(200);
         const body = JSON.parse(res.text);
         expect(body).toEqual({
